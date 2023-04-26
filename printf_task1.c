@@ -1,5 +1,4 @@
 #include "main.h"
-/********************PRINT CHAR********************/
 /**
  * print_char - this will print a character
  * @types: lists all agruments included
@@ -17,7 +16,6 @@ int flags, int width, int precision, int size)
 
 	return (handle_write_char(c, buffer, flags, width, precision, size));
 }
-/************************* PRINT A STRING *************************/
 /**
  * print_string - this will peint a sting
  * @types: lists all agruments included
@@ -26,7 +24,7 @@ int flags, int width, int precision, int size)
  * @width: the width of values
  * @precision: for precision specification
  * @size: a size specifier
- * Retrun: all the characters of a string printed
+ * Return: all the characters of a string printed
  */
 int print_string(va_list types, char buffer[],
 int flags, int width, int precision, int size)
@@ -68,7 +66,6 @@ int flags, int width, int precision, int size)
 	}
 	return (write(1, str, length));
 }
-/************************* PRINT PERCENT SIGN *************************/
 /**
  * print_percent - this will print the percentage sign
  * @types: lists all agruments included
@@ -90,7 +87,6 @@ int print_percent(va_list types, char buffer[],
 		UNUSED(size);
 		return (write(1, "%%", 1));
 }
-/************************* PRINT INT *************************/
 /**
  * print_int - this will print an int
  * @types: lists all agruments included
@@ -132,7 +128,6 @@ int print_int(va_list types, char buffer[],
 
 		return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
-/************************* PRINT BINARY *************************/
 /**
  * print_binary - this will print an unsigned number
  * @types: lists all agruments included
