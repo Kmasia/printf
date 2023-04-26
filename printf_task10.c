@@ -156,7 +156,7 @@ int write_unsgnd(int is_negative, int ind,
 	char padd = ' ';
 
 	UNUSED(is_negative);
-	UNUSED(size);#i
+	UNUSED(size);
 
 	if (precision == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0')
 		return (0);
